@@ -1,4 +1,4 @@
-/* --- 1. BIẾN CSS & RESET --- */
+/* --- 1. BIẾN CSS (Trúc) --- */
 :root {
     --primary-color: #d4af37; /* Vàng kim */
     --accent-color: #8b2e2e; /* Đỏ trầm */
@@ -28,7 +28,7 @@ body {
     line-height: 1.8;
 }
 
-/* --- 2. NAVIGATION (STICKY GLASS) --- */
+/* --- 2. NAVIGATION (STICKY GLASS) (Duy) --- */
 nav {
     position: sticky;
     top: 20px;
@@ -86,7 +86,7 @@ nav ul li a:hover {
     color: var(--accent-color);
 }
 
-/* --- 3. NỘI DUNG CHÍNH (LAYOUT & SECTIONS) --- */
+/* --- 3. NỘI DUNG CHÍNH (LAYOUT & SECTIONS) (Hạnh Như) --- */
 .container {
     max-width: 1200px;
     margin: 0 auto;

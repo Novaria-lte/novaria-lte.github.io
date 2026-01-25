@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Lạc Lối | Báo Tường 20-11</title>
+    
+    <!-- Font chữ & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Liên kết CSS Ngoại (Tái sử dụng style chung) -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* CSS Riêng cho trang 404 */
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('404.jpg') no-repeat center center/cover;
+            overflow: hidden;
+        }
+
+        /* Lớp phủ tối để làm nổi bật nội dung */
+        body::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1;
+        }
+
+        .error-container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 60px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+            max-width: 600px;
+            width: 90%;
+            color: #fff;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .error-code {
+            font-family: 'Dancing Script', cursive;
+            font-size: 8rem;
+            color: var(--primary-color);
+            margin: 0;
+            line-height: 1;
+            text-shadow: 4px 4px 0px rgba(0,0,0,0.3);
+        }
+
+        .error-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin: 20px 0;
+        }
+
+        .error-msg {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        /* Nút quay về (Tái sử dụng và tùy biến từ style.css) */
+        .home-btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: #fff; /* Chữ trắng cho nổi trên nền vàng */
+            padding: 15px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .home-btn:hover {
+            transform: translateY(-5px);
+            background: #fff;
+            color: var(--primary-color);
+            box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
+        }
+
+        .home-btn i {
+            margin-right: 10px;
+        }
+
+        /* Animation bay nhẹ */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="error-container">
+        <h1 class="error-code">404</h1>
+        <h2 class="error-title">Oh! Bạn vào nhầm lớp rồi phải không?</h2>
+        <p class="error-msg">
+            Có vẻ như trang bạn đang tìm kiếm đã "trốn học" hoặc không tồn tại. <br>
+            Đừng lo, hãy quay lại sân trường chính để tiếp tục tham quan nhé!
+        </p>
+        <a href="index.html" class="home-btn">
+            <i class="fas fa-school"></i> Quay Về Trang Chủ
+        </a>
+    </div>
+
+</body>
+</html>
